@@ -1,14 +1,26 @@
 # ⚡ Power Query ou DAX?
 
+<p align="center">
+  <img src="Comparativo-PowerQuery-vs-DAX.png" alt="Comparativo Power Query x DAX" width="900">
+</p>
+
 Como resolver o mesmo problema utilizando **Power Query** ou **DAX** no Power BI.
 
-Este exemplo mostra quando cada abordagem é mais adequada, ajudando na escolha da melhor solução para cada cenário.
+Este projeto apresenta duas abordagens para criar uma classificação por faixas, ajudando a escolher a solução mais adequada para cada cenário.
 
 ---
 
-## Problema
+## 📂 Arquivos
 
-Classificar registros em categorias como:
+- 📄 `PowerQuery_ClassificacaoPorFaixas.m`
+- 📄 `DAX_ClassificacaoPorFaixas.dax`
+- 🖼️ `Comparativo-PowerQuery-vs-DAX.png`
+
+---
+
+## 🎯 Problema
+
+Classificar registros em categorias, por exemplo:
 
 - Baixo
 - Médio
@@ -16,33 +28,38 @@ Classificar registros em categorias como:
 
 ---
 
-## Arquivos
-
-```text
-📂 power-bi-power-query-vs-dax
-│
-├── README.md
-├── PowerQuery_Categorias.m
-├── DAX_Categorias.dax
-└── Comparativo.png
-```
-
----
-
-## Quando usar
+## 📌 Quando utilizar cada abordagem
 
 | Power Query | DAX |
-|-------------|-----|
+|--------------|-----|
 | Transformação dos dados | Cálculos dinâmicos |
-| Regras fixas | Depende do contexto |
-| Melhor desempenho | Responde aos filtros |
+| Regras fixas | Depende do contexto do relatório |
+| Executado durante o carregamento | Executado durante a consulta |
+| Melhor desempenho para transformações | Maior flexibilidade para análises |
 
 ---
 
-## Objetivo
+## 🚀 Como utilizar
 
-Disponibilizar um exemplo prático e reutilizável para ajudar profissionais de Power BI a decidir quando utilizar **Power Query** e quando utilizar **DAX**.
+### Power Query
+
+1. Abra o **Editor do Power Query**.
+2. Crie uma **Coluna Personalizada**.
+3. Cole o código do arquivo `PowerQuery_ClassificacaoPorFaixas.m`.
+4. Ajuste o nome da tabela, da coluna e das faixas conforme necessário.
+
+### DAX
+
+1. Acesse **Modelagem → Nova Coluna**.
+2. Cole o código do arquivo `DAX_ClassificacaoPorFaixas.dax`.
+3. Ajuste o nome da tabela, da coluna e das faixas conforme o seu modelo.
 
 ---
 
-Sugestões e melhorias são sempre bem-vindas.
+## 💡 Objetivo
+
+Disponibilizar um exemplo simples, reutilizável e fácil de adaptar para ajudar profissionais de Power BI a decidir quando utilizar **Power Query** e quando utilizar **DAX** para resolver o mesmo problema.
+
+---
+
+⭐ Se este projeto foi útil, deixe uma estrela no repositório e acompanhe os próximos exemplos da série.
