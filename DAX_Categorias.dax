@@ -1,26 +1,19 @@
-// ================================================
-// Power Query - Classificação por Faixas
-// Exemplo reutilizável para Power BI
-//
-// ALTERE:
-// 1. #"SuaTabela" -> Nome da etapa anterior
-// 2. [Valor]      -> Coluna que deseja classificar
-// 3. Os limites das faixas, se necessário
-// ================================================
+/*
+===============================================
+DAX - Classificação por Faixas
+Exemplo reutilizável para Power BI
 
-let
-    Fonte = #"SuaTabela",
+ALTERE:
+1. 'SuaTabela' -> Nome da sua tabela
+2. [Valor]     -> Coluna que deseja classificar
+3. Os limites das faixas, se necessário
+===============================================
+*/
 
-    #"Adicionar Faixa" =
-        Table.AddColumn(
-            Fonte,
-            "Faixa",
-            each
-                if [Valor] <= 100 then "Baixo"
-                else if [Valor] <= 500 then "Médio"
-                else "Alto",
-            type text
-        )
-
-in
-    #"Adicionar Faixa"
+Faixa =
+SWITCH(
+    TRUE(),
+    'SuaTabela'[Valor] <= 100, "Baixo",
+    'SuaTabela'[Valor] <= 500, "Médio",
+    "Alto"
+)
